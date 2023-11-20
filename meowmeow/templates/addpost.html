@@ -1,0 +1,30 @@
+<!-- templates/home.html -->
+
+{% extends 'base.html' %}
+{% block style %}
+<link href="../static/styles/addpost.css" rel="stylesheet">
+{% endblock %}
+{% block content %}    
+    <h1>add post</h1>
+    <div class="linee"></div>
+    <form method="post" class="add" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <div class="owner">
+                <img src="https://img.flawlessfiles.com/_r/100x100/100/avatar/zoro_normal/av-zz-04.jpeg">
+                <p>name</p>
+            </div>
+            {{ form.title(placeholder=form.title.label.text) }}
+            <div class="add_to_your_post">
+                <span>add to your post</span>
+                <div>
+                    {{ form.img(id='img-upload-field', style='display: none;') }}
+                <label for="img-upload-field" onclick="document.getElementById('img-upload-field').click();"><button type="button">img</button></label>
+                    <button>tag</button>
+                    <button>ppl</button>
+                </div>
+            </div>
+            {{ form.button(class='add-post',value=form.button.label.text)}}
+    </form>
+
+    
+{% endblock %}

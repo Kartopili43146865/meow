@@ -1,0 +1,55 @@
+<!-- templates/home.html -->
+
+{% extends 'base.html' %}
+{% block style %}
+<link href="../static/styles/index.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="add-post">
+    <img src="https://img.flawlessfiles.com/_r/100x100/100/avatar/zoro_normal/av-zz-04.jpeg">
+    <a href="./add_post">What's on your mind, name?</a>
+</div>
+{% for element in posts %}
+        <div class="post">
+            <div class="avtor">
+                <img src="https://img.flawlessfiles.com/_r/100x100/100/avatar/zoro_normal/av-zz-04.jpeg">
+                <div>
+                    <p>jordan</p>
+                    <span>15 minute ago</span>
+                </div>
+            </div>
+            <img class="post-img" src="{{element.img}}">
+            <h2 class="title">{{element.title}}</h2>
+            <div class="line"></div>
+            <div class="reactions">
+                <button class="button">
+                    <div class="icon">i</div>
+                    <div>
+                        <p>like</p><span>150</span>
+                    </div>
+                </button>
+                <button class="button">
+                    <div class="icon">i</div>
+                    <div>
+                        <p>dislike</p><span>1342</span>
+                    </div>
+                </button>
+                <button class="button">
+                    <div class="icon">i</div>
+                    <div>
+                        <p>comment</p><span>323</span>
+                    </div>
+                </button>
+                <button class="button">
+                    <div class="icon">i</div>
+                    <div>
+                        <p>share</p><span>3232</span>
+                    </div>
+                </button>
+                    <div class="save icon">i</div>
+            </div>
+        </div>
+{% endfor %}
+
+{% endblock %}

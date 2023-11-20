@@ -1,0 +1,124 @@
+.posts {
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-color: #232A37;
+    overflow-y: scroll;
+}
+.post {
+    padding-top: 0.1px;
+    padding-bottom: 10px;
+    width: 96%;
+    margin-left: 2%;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #151B26;
+}
+.avtor {
+    display: flex;
+    margin: 2%;
+    justify-content: space-between;
+    width: 130px;
+}
+.avtor img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.avtor div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.avtor div span {
+    color: rgba(255, 255, 255, 0.397);
+    font-size: 14px;
+}
+.post-img {
+    width: 96%;
+    margin-left: 2%;
+    border-radius: 5px;
+}
+.title {
+    margin-left: 2%;
+}
+.line {
+    width: 96%;
+    margin-left: 2%;
+    height: 2px;
+    margin-top: 5px;
+    background-color: #232A37;
+}
+.reactions {
+    display: flex;
+    gap: 10px;
+    margin-left: 2%;
+    margin-top: 10px;
+}
+.reactions .button {
+    cursor: pointer;
+    display: flex;
+    border: none;
+    background: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.1s;
+}
+.save {
+    margin-left: auto;
+    margin-right: 2%;
+    cursor: pointer;
+}
+.reactions .button:hover {
+    background-color: #232A37;
+}
+.reactions .icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    background-color: #232A37;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.reactions p {
+    color: rgba(255, 255, 255, 0.356);
+}
+.post .title {
+    font-size: 30px;
+}
+.add-post {
+    display: flex;
+    width: 96%;
+    height: 70px;
+    align-items: center;
+    margin-left: 2%;
+    background-color: #151B26;
+    margin-top: 10px;
+    border-radius: 5px;
+    justify-content: space-evenly;
+}
+.add-post img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.add-post a {
+    width: calc(95% - 40px);
+    height: 40px;
+    border-radius: 40px;
+    background-color: #232A37;
+    color: rgba(255, 255, 255, 0.527);
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    user-select: none;
+    text-decoration: none;
+}
+.add-post a:hover {
+    background-color: #232a37af;
+}

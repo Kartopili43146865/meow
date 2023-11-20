@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    {% block style %}
+    {% endblock %}
+    <link href="../static/styles/navbar.css" rel="stylesheet">
+    <link href="../static/styles/base.css" rel="stylesheet">
+
+</head>
+<body>
+    {% include "navbar.html"%}
+    <main>
+        <div class="sidebar">
+            <a href="/">
+                <span>h</span>
+                <p>Home</p>
+            </a>
+            <a href="/">
+                <span>h</span>
+                <p>following</p>
+            </a>
+            <a href="/">
+                <span>h</span>
+                <p>saved</p>
+            </a>
+            <a href="/">
+                <span>h</span>
+                <p>setting</p>
+            </a>
+        </div>
+        <div class="posts">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div class="people">
+            <input type="search">
+            <p>friends</p>
+            <div class="line"></div>
+        </div>
+    </main>
+</body>
+</html>
