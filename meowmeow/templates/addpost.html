@@ -16,10 +16,8 @@
             <span>add to your post</span>
             <div>
                 <img id="selected-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Selected Image">
-                {{ form.img(id='img-upload-field', style='display:none') }}
-                <label for="img-upload-field" onclick="document.getElementById('img-upload-field').click();">
-                    <button type="button">img</button>
-                </label>
+                {{ form.img(id='img-upload-field') }}
+                <button for="img-upload-field" onclick="document.getElementById('img-upload-field').click();" type="button">img</button>
                 <button>tag</button>
                 <button>ppl</button>
             </div>
