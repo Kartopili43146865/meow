@@ -50,6 +50,11 @@ textarea {
     padding: 20px;
     align-items: center;
 }
+.add_to_your_post div {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
 .add_to_your_post span{
     font-size: 20px;
 }
@@ -72,4 +77,11 @@ textarea {
     background-color: blue;
     cursor: pointer;
     font-size: 20px;
+}
+
+.selected-img {
+    max-width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid rgb(248, 0, 0);
 }

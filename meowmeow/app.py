@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask, render_template, flash
 from werkzeug.utils import secure_filename
 from form import addPost
 import os
@@ -21,7 +21,9 @@ def home():
 @app.route('/add_post', methods=["GET","POST"])
 def inner():
     form = addPost()
+    print(form.validate_on_submit == True)
     if form.validate_on_submit:
+        flash('fill imagesss')
         if form.img.data:
             filename = secure_filename(form.img.data.filename)
             new_product = {
@@ -30,6 +32,7 @@ def inner():
             }
             form.img.data.save(os.path.join(app.root_path, 'static', filename))
             posts.append(new_product)
+            return render_template('index.html', posts=posts)
 
     return render_template('addpost.html', form=form)
 
