@@ -12,12 +12,21 @@
 </div>
 {% for element in posts %}
         <div class="post">
-            <div class="avtor">
-                <img src="https://img.flawlessfiles.com/_r/100x100/100/avatar/zoro_normal/av-zz-04.jpeg">
-                <div>
-                    <p>jordan</p>
-                    <span>15 minute ago</span>
+            <div class="detals">
+                <div class="avtor">
+                   <img src="https://img.flawlessfiles.com/_r/100x100/100/avatar/zoro_normal/av-zz-04.jpeg">
+                    <div>
+                        <p>jordan</p>
+                        <span>15 minute ago</span>
+                 </div>
                 </div>
+                <div class="more">
+                    <button class="btn">...</button>
+                    <div>
+                        <a class="item" href="/edit{{ element.id }}">edit</a>
+                        <a  href="/delete{{ element.id }}" class="item">delete</a>
+                    </div>
+                </div> 
             </div>
             <img class="post-img" src="{{element.img}}">
             <h2 class="title">{{element.title}}</h2>

@@ -8,3 +8,9 @@ class addPost(FlaskForm):
     img = FileField('', validators=[FileRequired()])
 
     button = SubmitField('Post')
+
+
+class editPost(FlaskForm):
+    title = TextAreaField("let's friend know what's on your mind...")
+    img = FileField('')
+    button = SubmitField('Edit')

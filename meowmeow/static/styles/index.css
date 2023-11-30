@@ -122,3 +122,49 @@
 .add-post a:hover {
     background-color: #232a37af;
 }
+
+.detals {
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    height: 60px;
+}
+.detals .more div {
+    background-color: #232a37af;
+    border-radius: 5px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translate(10px,15px);
+}
+.detals .more .btn {
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #232a37af;
+    border: none;
+    transform: translateY(10px);
+    margin-left: 50%;
+}
+.detals .more div .item {
+    cursor: pointer;
+    transition: 0.1s;
+    height: 35px;
+    border-radius: 0;
+    display: flex;
+    align-content: center;
+    background-color: #232a37af;
+    border: none;
+    align-items: center;
+    padding-left: 5px;
+    font-size: 16px;
+}
+.detals .more div .item:hover{
+    background-color: rgba(255, 255, 255, 0.144);
+}
+.more a {
+    text-decoration: none;
+}
