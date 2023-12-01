@@ -59,6 +59,21 @@
                     <div class="save icon">i</div>
             </div>
         </div>
+        
 {% endfor %}
+        <script>
+            const imageElement = document.querySelectorAll('.post-img');
+            const btns = document.querySelectorAll('.btn');
 
+            for(let i = 0; i < btns.length; i++){
+                btns[i].addEventListener('click', function() {
+                    document.querySelectorAll('.more div')[i].classList.toggle('visible')
+                });
+                
+                imageElement[i].addEventListener('click', function() {
+                    window.open(imageElement[i].src, '_blank');
+                });
+            }
+            
+        </script>
 {% endblock %}

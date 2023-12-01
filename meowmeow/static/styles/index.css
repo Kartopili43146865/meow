@@ -37,9 +37,15 @@
     width: 96%;
     margin-left: 2%;
     border-radius: 5px;
+    cursor: pointer;
+    max-height: 400px;
+    object-fit: cover;
 }
 .title {
     margin-left: 2%;
+    display: flex;
+    max-width: 96%;
+    overflow-x: auto;
 }
 .line {
     width: 96%;
@@ -137,6 +143,7 @@
     flex-direction: column;
     overflow: hidden;
     transform: translate(10px,15px);
+    visibility: hidden;
 }
 .detals .more .btn {
     cursor: pointer;
@@ -167,4 +174,8 @@
 }
 .more a {
     text-decoration: none;
+}
+
+.visible {
+    visibility: visible!important;
 }
