@@ -9,6 +9,7 @@
 <div class="add-post">
     <img src="https://img.flawlessfiles.com/_r/100x100/100/avatar/zoro_normal/av-zz-04.jpeg">
     <a href="./add_post">What's on your mind, name?</a>
+    <a href="./add_post" class="plus">+</a>
 </div>
 {% for element in posts %}
         <div class="post">
@@ -16,10 +17,17 @@
                 <div class="avtor">
                    <img src="https://img.flawlessfiles.com/_r/100x100/100/avatar/zoro_normal/av-zz-04.jpeg">
                     <div>
-                        <p>jordan</p>
+                        <p>
+                            {{element.username }} 
+                            {% if current_user.name == element.username %}
+                            <span>(You are the author of this post
+                                )</span>
+                            {% endif %}
+                        </p>
                         <span>15 minute ago</span>
                  </div>
                 </div>
+                {% if current_user.name == element.username %}
                 <div class="more">
                     <button class="btn">...</button>
                     <div>
@@ -27,17 +35,22 @@
                         <a  href="/delete{{ element.id }}" class="item">delete</a>
                     </div>
                 </div> 
+                {% endif %}
             </div>
             <img class="post-img" src="{{element.img}}">
             <h2 class="title">{{element.title}}</h2>
             <div class="line"></div>
             <div class="reactions">
-                <button class="button">
+                <form action="{{ url_for('process_data') }}" method="post" class="button">
+                    <input type="hidden" name="post_id" value="{{ element.id }}">
+                    <button type="submit" class="like">
                     <div class="icon">i</div>
-                    <div>
-                        <p>like</p><span>150</span>
+                    <div style="display: block;">
+                        <p class="like">like</p>
+                        <span>{{ element.like }}</span>
                     </div>
-                </button>
+                    </button>
+                </form>
                 <button class="button">
                     <div class="icon">i</div>
                     <div>
@@ -74,6 +87,7 @@
                     window.open(imageElement[i].src, '_blank');
                 });
             }
-            
+           
         </script>
 {% endblock %}
+

@@ -1,9 +1,19 @@
 <nav>
-    <h2 class="name">meow</h2>
-    <input type="search" class="search" placeholder="search...">
+    <strong><a href="/" class="name">Meow</a></strong>
+    <!-- <input type="search" class="search" placeholder="search..."> -->
     <div class="btns">
+        {%if current_user.is_authenticated %}
         <button>l</button>
         <button>n</button>
         <button>p</button>
+        <div class="registerr">
+            <a href="/logout">log out</a>
+        </div>
+        {%else %}
+        <div class="registerr">
+            <a href="/signup">sign up</a>
+            <a href="/login">log in</a>
+        </div>
+        {%endif%}
     </div>
 </nav>
